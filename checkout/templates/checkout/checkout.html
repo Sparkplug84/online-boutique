@@ -90,7 +90,7 @@
                 {{ order_form.county | as_crispy_field }}
                 <div class="form-check form_check-inline float_right mr-0">
                     {% if user.is_authenticated %}
-                        <label class="form-check-label" for="id-save-info">Save this delivery infor to my profile</label>
+                        <label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
                         <input class="from_check_input ml-2 mr-0" id="id-save-info" type="checkbox" name="save-info" checked>
                     {% else %}
                         <label class="form-check-label" for="id-save-info">
@@ -134,4 +134,11 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}
