@@ -108,6 +108,9 @@
                 <!-- Used ro display form errors -->
                 <div class="mb-3 text-danger" id="card-errors"></div>
 
+                <!-- Pass the client secret to the view so we can access the payment intent -->
+                <input type="hidden" value="{{ client_secret }}" name="client_secret">
+
             </fieldset>
 
             <div class="submit-button text-right mt-5 mb-2">
