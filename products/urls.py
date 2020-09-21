@@ -7,4 +7,5 @@ urlpatterns = [
     # Adding int: to the product detail ensures the url is a number as navigating
     # add/ will interpret the string as an id and throw an error
     path('add/', views.add_product, name='add_product'),
+    path('edit/<int:product_id>/', views.edit_product, name='edit_product'),
 ]
