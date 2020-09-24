@@ -26,7 +26,7 @@ SECRET_KEY = '&+(%h%s23_i0sq$ekt2$_^ls$@ms36$-!fsrm!0_f5fd&!l8t^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sparkplug84-online-boutique.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['sparkplug-online-boutique.herokuapp.com', 'localhost']
 
 
 # Application definition
