@@ -122,7 +122,7 @@ WSGI_APPLICATION = 'online_boutique.wsgi.application'
 
 if 'DATABASE_URL' in os.environ:
     DATABASES = {
-        dj_database_url.parse(os.environ.get('DATABASE_URL'))
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
 else:
     DATABASES = {
